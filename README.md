@@ -7,7 +7,7 @@
   <img src="assets/multi_modal_bio_signal_analyzer_banner.png" alt="Multi-Modal Bio-Signal Analyzer Banner" width="100%">
 </p>
 
-<h1 align="center">🧠 Multi-Modal Bio-Signal Analyzer</h1>
+<h1 align="center"><img src="assets/blinking_eye.gif" width="45" align="middle"> 🧠 Multi-Modal Bio-Signal Analyzer <img src="assets/flexing_hand.gif" width="45" align="middle"></h1>
 
 <h3 align="center">
   ECG • EOG • EMG based Real-Time Neuroscience & Assistive Technology Platform
