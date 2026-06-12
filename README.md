@@ -219,7 +219,8 @@ Multi-modal-Bio-Signal-Analyzer-Nuroscience-project-
 ## 1️⃣ 4-Channel EMG – NeuroPulseAI
 
 <p align="center">
-  <img src="assets/emg_system.jpg" alt="4-Channel EMG Rehabilitation & Analysis System" width="60%">
+  <img src="assets/emg_system.jpg" alt="4-Channel EMG Rehabilitation & Analysis System" width="48%">
+  <img src="assets/emg_plotter_gui.png" alt="NeuroPulseAI 4-Channel EMG Dashboard Software" width="48%">
 </p>
 
 The 4-channel EMG module captures multiple muscle signals and helps analyze muscle activation patterns.
@@ -245,6 +246,10 @@ The 4-channel EMG module captures multiple muscle signals and helps analyze musc
 
 ## 2️⃣ ECG Plotter
 
+<p align="center">
+  <img src="assets/ecg_plotter_gui.png" alt="Real-Time ECG Monitor Dashboard" width="75%">
+</p>
+
 The ECG module plots heart electrical activity in real-time.
 
 ### Key Capabilities
@@ -268,8 +273,9 @@ The ECG module plots heart electrical activity in real-time.
 ## 3️⃣ Nurosync – EOG Based Control
 
 <p align="center">
-  <img src="assets/nurosync_headband.jpg" alt="NuroSync Eye Blink Control System Headband" width="45%">
-  <img src="assets/tarzan_car.jpg" alt="Tarzan AI-Powered EOG Controlled Car" width="45%">
+  <img src="assets/nurosync_headband.jpg" alt="NuroSync Eye Blink Control System Headband" width="31%">
+  <img src="assets/tarzan_car.jpg" alt="Tarzan AI-Powered EOG Controlled Car" width="31%">
+  <img src="assets/nurosync_desktop_gui.png" alt="NuroSync Assistive Control Dashboard" width="31%">
 </p>
 
 Nurosync uses EOG signals to detect eye blinks and convert them into control commands.
@@ -294,7 +300,8 @@ Nurosync uses EOG signals to detect eye blinks and convert them into control com
 ## 4️⃣ ParaTalk – Blink Based Communication System
 
 <p align="center">
-  <img src="assets/paratalk_device.jpg" alt="ParaTalk EOG Eye-Blink Assistive Interface" width="60%">
+  <img src="assets/paratalk_device.jpg" alt="ParaTalk EOG Eye-Blink Assistive Interface" width="48%">
+  <img src="assets/paratalk_web_gui.png" alt="ParaTalk Assistive Communication Web Interface" width="48%">
 </p>
 
 ParaTalk is a web-based assistive communication platform designed for people with severe motor disabilities.
