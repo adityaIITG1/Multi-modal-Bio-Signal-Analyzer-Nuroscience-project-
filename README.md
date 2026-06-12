@@ -583,6 +583,10 @@ It is **not a certified medical device** and should not be used for clinical dia
 ## 👨💻 Built By
 
 <p align="center">
+  <img src="assets/team_logo.png" alt="Debuggers Squad Logo" width="180">
+</p>
+
+<p align="center">
   <b>Debuggers Squad</b>
 </p>
 
