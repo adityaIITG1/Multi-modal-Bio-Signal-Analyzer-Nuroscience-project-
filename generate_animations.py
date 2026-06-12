@@ -150,42 +150,52 @@ def main():
     os.makedirs("assets", exist_ok=True)
     width, height = 120, 120
     
-    # 1. Generate Blinking Eye
+    # 1. Generate Blinking Eye (faster, double-blink pattern)
     eye_frames = []
     # Open state
-    for _ in range(20):
+    for _ in range(10):
         eye_frames.append(draw_eye_frame(width, height, 1.0))
-    # Closing
-    for factor in [0.7, 0.4, 0.1]:
+    # First blink: close
+    for factor in [0.6, 0.1]:
         eye_frames.append(draw_eye_frame(width, height, factor))
     # Closed
-    for _ in range(3):
-        eye_frames.append(draw_eye_frame(width, height, 0.0))
-    # Opening
-    for factor in [0.3, 0.6, 0.9]:
+    eye_frames.append(draw_eye_frame(width, height, 0.0))
+    # Open
+    for factor in [0.4, 0.8]:
+        eye_frames.append(draw_eye_frame(width, height, factor))
+    # Short open state between double-blinks
+    for _ in range(2):
+        eye_frames.append(draw_eye_frame(width, height, 1.0))
+    # Second blink: close
+    for factor in [0.6, 0.1]:
+        eye_frames.append(draw_eye_frame(width, height, factor))
+    # Closed
+    eye_frames.append(draw_eye_frame(width, height, 0.0))
+    # Open
+    for factor in [0.4, 0.8]:
         eye_frames.append(draw_eye_frame(width, height, factor))
         
-    make_transparent_gif(eye_frames, "assets/blinking_eye.gif", duration=80)
+    make_transparent_gif(eye_frames, "assets/blinking_eye.gif", duration=50)
     print("Saved assets/blinking_eye.gif")
     
-    # 2. Generate Flexing Hand
+    # 2. Generate Flexing Hand (faster contraction cycle)
     hand_frames = []
-    # Relaxed state (20 frames)
-    for _ in range(15):
+    # Relaxed state
+    for _ in range(6):
         hand_frames.append(draw_hand_frame(width, height, 0.0))
-    # Contracting (10 frames)
-    for step in range(10):
-        factor = step / 9.0
+    # Contracting
+    for step in range(4):
+        factor = (step + 1) / 4.0
         hand_frames.append(draw_hand_frame(width, height, factor))
-    # Fully contracted state (10 frames)
-    for _ in range(10):
+    # Fully contracted state
+    for _ in range(4):
         hand_frames.append(draw_hand_frame(width, height, 1.0))
-    # Relaxing (10 frames)
-    for step in range(10):
-        factor = 1.0 - (step / 9.0)
+    # Relaxing
+    for step in range(4):
+        factor = 1.0 - ((step + 1) / 4.0)
         hand_frames.append(draw_hand_frame(width, height, factor))
         
-    make_transparent_gif(hand_frames, "assets/flexing_hand.gif", duration=80)
+    make_transparent_gif(hand_frames, "assets/flexing_hand.gif", duration=50)
     print("Saved assets/flexing_hand.gif")
 
 if __name__ == "__main__":
