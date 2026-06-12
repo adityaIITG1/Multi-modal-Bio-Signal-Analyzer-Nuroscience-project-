@@ -6,6 +6,7 @@ const groq = new Groq({
 });
 
 export async function POST(request: Request) {
+  let systemPrompt = '';
   try {
     const { topic, userSide, opponentText, language = 'en-IN' } = await request.json();
 
@@ -26,7 +27,7 @@ export async function POST(request: Request) {
       languageInstruction = 'Generate all reply texts in ENGLISH.';
     }
 
-    const systemPrompt = `You are a debate coach helping a disabled user debate using one blink.
+    systemPrompt = `You are a debate coach helping a disabled user debate using one blink.
 
 Topic: ${topic}
 User side: ${userSide}

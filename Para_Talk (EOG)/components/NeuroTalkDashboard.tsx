@@ -54,6 +54,7 @@ import BlinkDebateArena from "./BlinkDebateArena";
 import BlinkCurrentAffairs from "./BlinkCurrentAffairs";
 import BlinkYouTube from "./BlinkYouTube";
 import { WhatsAppBlinkAssist } from "./WhatsAppBlinkAssist";
+import NeuroLab from "./NeuroLab";
 
 type LanguageCode =
   | "en-IN"
@@ -963,7 +964,7 @@ const EogWaveform = () => {
 export default function NeuroTalkDashboard() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [mode, setMode] = useState<
-    "care" | "talk" | "games" | "internet" | "ide" | "art" | "data" | "income" | "ai_chat" | "design" | "web" | "cyber" | "caretaker_cyber" | "chess" | "debate" | "news-quiz" | "youtube" | "blink-agent" | "whatsapp-blink"
+    "care" | "talk" | "games" | "internet" | "ide" | "art" | "data" | "income" | "ai_chat" | "design" | "web" | "cyber" | "caretaker_cyber" | "chess" | "debate" | "news-quiz" | "youtube" | "blink-agent" | "whatsapp-blink" | "neurolab"
   >("care");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [internetResponse, setInternetResponse] = useState<string | null>(null);
@@ -1556,7 +1557,8 @@ export default function NeuroTalkDashboard() {
         mode === "youtube" ||
         mode === "caretaker_cyber" ||
         mode === "blink-agent" ||
-        mode === "whatsapp-blink"
+        mode === "whatsapp-blink" ||
+        mode === "neurolab"
       )
         return;
       event.preventDefault();
@@ -2012,6 +2014,26 @@ export default function NeuroTalkDashboard() {
                 )}
                 WhatsApp
               </button>
+              <button
+                onClick={() => {
+                  setMode("neurolab");
+                  setActiveIndex(0);
+                  setProgress(0);
+                  setSelectedCategory(null);
+                  setInternetResponse(null);
+                  if (timerRef.current) window.clearTimeout(timerRef.current);
+                  if (intervalRef.current) window.clearInterval(intervalRef.current);
+                }}
+                className={`relative px-2 md:px-2.5 py-1 md:py-1.5 text-[11px] md:text-[12px] font-black rounded-[18px] transition-all z-10 ${mode === "neurolab" ? "text-slate-900" : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"}`}
+              >
+                {mode === "neurolab" && (
+                  <motion.div
+                    layoutId="modeTab"
+                    className="absolute inset-0 bg-gradient-to-r from-indigo-200/80 via-purple-300/80 to-pink-400/80 rounded-[18px] shadow-[0_2px_15px_rgba(99,102,241,0.15)] border border-indigo-300 z-[-1]"
+                  />
+                )}
+                Neuro Lab
+              </button>
             </div>
           </div>
         </header>
@@ -2158,6 +2180,10 @@ export default function NeuroTalkDashboard() {
             >
               <ChevronLeft className="w-6 h-6 text-white" />
             </button>
+          </div>
+        ) : mode === "neurolab" ? (
+          <div className="fixed inset-0 z-[100] bg-slate-950 overflow-y-auto">
+            <NeuroLab onExit={() => setMode("care")} />
           </div>
         ) : (
           <section
