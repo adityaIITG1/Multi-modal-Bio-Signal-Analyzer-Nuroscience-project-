@@ -1,0 +1,6 @@
+PySide6
+pyserial
+pyqtgraph
+pandas
+reportlab
+pyttsx3
