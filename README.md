@@ -218,6 +218,10 @@ Multi-modal-Bio-Signal-Analyzer-Nuroscience-project-
 
 ## 1️⃣ 4-Channel EMG – NeuroPulseAI
 
+<p align="center">
+  <img src="assets/emg_system.jpg" alt="4-Channel EMG Rehabilitation & Analysis System" width="60%">
+</p>
+
 The 4-channel EMG module captures multiple muscle signals and helps analyze muscle activation patterns.
 
 ### Key Capabilities
@@ -263,6 +267,11 @@ The ECG module plots heart electrical activity in real-time.
 
 ## 3️⃣ Nurosync – EOG Based Control
 
+<p align="center">
+  <img src="assets/nurosync_headband.jpg" alt="NuroSync Eye Blink Control System Headband" width="45%">
+  <img src="assets/tarzan_car.jpg" alt="Tarzan AI-Powered EOG Controlled Car" width="45%">
+</p>
+
 Nurosync uses EOG signals to detect eye blinks and convert them into control commands.
 
 ### Key Capabilities
@@ -283,6 +292,10 @@ Nurosync uses EOG signals to detect eye blinks and convert them into control com
 ---
 
 ## 4️⃣ ParaTalk – Blink Based Communication System
+
+<p align="center">
+  <img src="assets/paratalk_device.jpg" alt="ParaTalk EOG Eye-Blink Assistive Interface" width="60%">
+</p>
 
 ParaTalk is a web-based assistive communication platform designed for people with severe motor disabilities.
 
